@@ -1,7 +1,7 @@
 /*  
     Victor Li 
     Chapter 2: Exercise 1
-    This program assigns and outputs the company name, hours worked, rate per hour, and gross pay variables to the console
+    This program assigns and outputs the company name, hours worked, rate per hour, and gross pay variables
 */ 
 
 #include <iostream>
