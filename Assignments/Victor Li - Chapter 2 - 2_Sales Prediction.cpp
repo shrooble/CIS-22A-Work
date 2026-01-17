@@ -15,7 +15,7 @@ int main()
 // This calculates the percentage of the incoming sales
   totalSales = sales * salesPercent;
 
-  cout << "The East Coast Division will generate " << totalSales << " if the company has $8.6 million sales this year." << endl;
+  cout << "The East Coast Division will generate $" << totalSales << " if the company has $8.6 million sales this year." << endl;
   
   return 0; 
 }
