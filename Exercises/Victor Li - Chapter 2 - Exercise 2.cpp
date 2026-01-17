@@ -11,9 +11,8 @@ using namespace std;
 
 int main()
 {
-    const double length = 12.5, width = 8.3;
+    double length = 12.5, width = 8.3, area, perimeter;
     const int numberTwo = 2;
-    float area, perimeter;
     
 //This determines the area and perimeter based on the length and width variables 
     area = length * width;
