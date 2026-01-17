@@ -1,6 +1,8 @@
 /*  
     Victor Li 
     Chapter 2: Exercise 2
+    This program assigns and outputs the length, width, area, and perimeter variables of a preset rectangle to the console
+    Included at the bottom is the Optional Challenge
 */ 
 
 #include <iostream>
@@ -23,7 +25,7 @@ int main()
     cout << "Area: " << area << endl;
     cout << "Perimeter: " << perimeter << endl;
     
-//This output is for the Optional Challenge 
+//This console output is for the Optional Challenge 
     cout << "\nOptional Challenge: \nThe side of a double is " << sizeof(double) << " bytes." << endl;
     
     return 0;
