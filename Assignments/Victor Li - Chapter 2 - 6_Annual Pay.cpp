@@ -15,7 +15,7 @@ int main()
 //This calculates the annual pay by multiplying the pay amount by the pay periods in a year
   annualPay = payAmount * payPeriods;
 
-  cout << "The total annual pay of the employee is " << annualPay << "." << endl;
+  cout << "The total annual pay of the employee is $" << annualPay << "." << endl;
 
   return 0;
 }
