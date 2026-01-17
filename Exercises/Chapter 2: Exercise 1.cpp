@@ -13,6 +13,7 @@ int main()
     int hoursWorked = 40, rateHour = 100, grossPay;
     string companyName = "De Anza College";
 
+// This determines the grossPay based on the hoursWorked and rateHour
     grossPay = hoursWorked * rateHour;
     
     cout << "Company Name is: " << companyName << endl;
