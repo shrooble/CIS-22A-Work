@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-    double hoursWorked, hourlyRate, pay;
+    double hoursWorked, hourlyRate, grossPay;
     
     cout << "Enter the amount of hours worked and the hourly pay rate\n";
     cout << "Each should be separated by a space with no special $ characters.\n";
@@ -18,11 +18,11 @@ int main()
     cin >> hoursWorked >> hourlyRate;
   
 // This finds the gross pay by multiplying the hours worked by the hourly pay rate
-    pay = hoursWorked * hourlyRate;
+    grossPay = hoursWorked * hourlyRate;
     
     cout << "Hours Worked: " << hoursWorked << endl;
     cout << "Hourly Pay Rate: " << hourlyRate << endl;
-    cout << "Gross Pay: " << pay << endl;
+    cout << "Gross Pay: " << grossPay << endl;
     
     return 0;
 }
