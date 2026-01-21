@@ -51,7 +51,7 @@ Part 2: Predict
 
 /*
 Part 4: Debug Scenario
-  Sample Output When Entering 20 A 3.7:
+  Sample Output When Entering "20 A 3.7":
   
   Enter your age: 
   20
