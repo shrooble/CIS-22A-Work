@@ -15,7 +15,7 @@ int main()
 // This calculates the sum of the numberOne and numberTwo variables
   total = numberOne + numberTwo;
   
-  cout << "The total value of " << numberOne << " and " << numberTwo << " is " << total << "." << endl;
+  cout << "The total value of " << numberOne << " and " << numberTwo << " is " << total << ".\n";
 
   return 0;
 }
