@@ -1,7 +1,7 @@
 /*
   Victor Li
   Chapter 2: Sum of Two Numbers
-  This program stores 50 and 100 as integer variables and outputs the total 
+  This program stores 50 and 100 as integer variables and outputs the sum 
 */
 
 #include <iostream>
