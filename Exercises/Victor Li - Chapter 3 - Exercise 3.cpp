@@ -6,18 +6,29 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-  const double tax;
-  int hours, rate, grossPay;
+  const double tax = 0.12;
+  const int maxDocument = 9999;
+  int hours, rate, grossPay, ;
+  string name;
 
-  cout << "Please enter your College or Company name\n";
+  cout << "Enter your College or Company name\n";    
+  getline(cin, name);
+  cout << "Enter the number of hours worked\n";
+  cin << hours;
+  cout << "Enter the hourly pay rate\n";
+  cin << rate;
 
-  getline(cin, );
+  grossPay = hours * rate;
+  
+  
 
+  cout << "" << fixed << setprecision(2);
   
 
   return 0;
