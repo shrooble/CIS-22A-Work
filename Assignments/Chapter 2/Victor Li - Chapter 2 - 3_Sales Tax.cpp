@@ -5,6 +5,7 @@
 */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ int main()
 // This finds the total tax of the purchase by adding the state and county taxes before multiplying them with the purchase amount
   totalTax = purchaseAmount * (stateTax + countyTax);
 
-  cout << "The total sales tax on a $" << purchaseAmount << " purchase is: $" << totalTax << endl;
+  cout << "The total sales tax on a $" << purchaseAmount << " purchase is: $" << fixed << setprecision(2) << totalTax << endl;
 
   return 0;
 }
