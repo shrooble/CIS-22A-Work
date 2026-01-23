@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-  double mealCost = 88.67, taxPercent = 6.75, tipPercent = 20, taxAmount, totalTax, tipAmount, totalBill;
+  double mealCost = 88.67, taxPercent = 0.0675, tipPercent = 0.20, taxAmount, totalTax, tipAmount, totalBill;
 
 // This calculates the cost of the meal by calculating the amount after tax and adding it to the subtotal to get the amount including tax
   taxAmount = mealCost * taxPercent;
