@@ -11,10 +11,10 @@ using namespace std;
 int main()
 {
 
-  cout << "The amount of memory char will use is " << sizeof(char) << " bytes." << endl;
-  cout << "The amount of memory int will use is " << sizeof(int) << " bytes." << endl;
-  cout << "The amount of memory float will use is " << sizeof(float) << " bytes." << endl;
-  cout << "The amount of memory double will use is " << sizeof(double) << " bytes." << endl;
+  cout << "The amount of memory the char variable will use is " << sizeof(char) << " bytes." << endl;
+  cout << "The amount of memory the int variable will use is " << sizeof(int) << " bytes." << endl;
+  cout << "The amount of memory the float variable will use is " << sizeof(float) << " bytes." << endl;
+  cout << "The amount of memory the double variable will use is " << sizeof(double) << " bytes." << endl;
   
   return 0;
 }
