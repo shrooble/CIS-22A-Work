@@ -27,18 +27,18 @@ int main()
 
   grossPay = hours * rate;
   taxAmount = grossPay * tax;
-  netPay = grossPay + taxAmount;
+  netPay = grossPay - taxAmount;
   avgPayHour = grossPay / static_cast<double>(hours);
 
-  cout << "Information Summary\n";
+  cout << "\nInformation Summary\n";
   cout << "-------------------\n";
   cout << "Company Name: " << name << endl;
   cout << "Hours Worked: " << hours << endl;
   cout << "Hourly Pay Rate: " << rate << endl;
   cout << "Gross Pay: " << fixed << setprecision(2) << grossPay << endl;
-  cout << "Tax Amount: " << fixed << setprecision(2) << taxAmount << endl;
-  cout << "Total Pay: " << fixed << setprecision(2) << netPay << endl;
-  cout << "Average Pay Per Hour: " << fixed << setprecision(2) << avgPayHour << endl;
+  cout << "Tax Amount: " << taxAmount << endl;
+  cout << "Total Pay: " << netPay << endl;
+  cout << "Average Pay Per Hour: " << avgPayHour << endl;
 
   return 0;
 }
