@@ -13,7 +13,7 @@ int main()
   double purchaseAmount = 95.0, stateTax = 0.04, countyTax = 0.02, totalTax;
 
 // This finds the total tax of the purchase by adding the state and county taxes before multiplying them with the purchase amount
-  totalTax = purchase * (stateTax + countyTax);
+  totalTax = purchaseAmount * (stateTax + countyTax);
 
   cout << "The total sales tax on a $" << purchaseAmount << " purchase is: $" << totalTax << endl;
 
