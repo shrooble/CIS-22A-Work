@@ -10,11 +10,12 @@ using namespace std;
 
 int main()
 {
-  double gasoline = 15, distance = 375, milesGal;
+  double gasoline = 15.0, distance = 375.0, milesGal;
 
+// This calculates the miles per gallon by dividing the distance the car can travel by the amount of gasoline
   milesGal = distance / gasoline;
   
-  cout << "The miles per gallon of the car is " << milesGal << "." << endl;
+  cout << "The miles per gallon of the car is: " << milesGal << endl;
   
   return 0;
 }
