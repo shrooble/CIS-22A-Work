@@ -2,6 +2,7 @@
   Victor Li
   Chapter 3: Exercise 3
   This program provides an information summary of: Company Name, Hours Worked, Hourly Pay Rate, Document Number, Gross Pay, Tax Amount, Total Pay, and Average Hourly Pay
+  FIX THE RAND() AND THE EXTRA maxDocument VARIABLE
 */
 
 #include <iostream>
