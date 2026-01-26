@@ -42,13 +42,13 @@ int main()
   cout << "\nInformation Summary\n";
   cout << "-------------------\n";
   cout << "Company Name: " << name << endl;
-  cout << "Hours Worked: " << hours << endl;
-  cout << "Hourly Pay Rate: " << hourlyRate << endl;
-  cout << "Document Number: " << documentNumber << endl;
-  cout << "Gross Pay: " << fixed << setprecision(2) << grossPay << endl;
-  cout << "Tax Amount: " << taxAmount << endl;
-  cout << "Total Pay: " << netPay << endl;
-  cout << "Average Hourly Pay (Calculated using type casting): " << avgPayHour << endl;
+  cout << "Hours Worked: " << hours << " hours" << endl;
+  cout << "Hourly Pay Rate: $" << hourlyRate << endl;
+  cout << "Document Number: #" << documentNumber << endl;
+  cout << "Gross Pay: $" << fixed << setprecision(2) << grossPay << endl;
+  cout << "Tax Amount: $" << taxAmount << endl;
+  cout << "Total Pay: $" << netPay << endl;
+  cout << "Average Hourly Pay (Calculated using type casting): $" << avgPayHour << endl;
 
   return 0;
 }
