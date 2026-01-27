@@ -20,7 +20,7 @@ int main()
 // This
   incomeGenerated = (ticketA * classA) + (ticketB * classB) + (ticketC * classC);
 
-  cout << "The income generated from ticket sales is: $" << fixed << setprecision(2) << incomeGenerated << endl;
+  cout << "The income generated from ticket sales is: $" << fixed << setprecision(2) << showpoint << incomeGenerated << endl;
   
   return 0;
 }
