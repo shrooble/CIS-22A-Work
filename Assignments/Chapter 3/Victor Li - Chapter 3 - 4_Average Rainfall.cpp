@@ -18,7 +18,8 @@ int main() {
 // This determines the average amount of rainfall by getting the sum of the rainfall amount for 3 months before dividing it by 3
   averageRain = (rainOne + rainTwo + rainThree) / 3;
   
-  cout << "The average rainfall for " << monthOne << ", " << monthTwo << ", " << monthThree << " is " << averageRain << " inches.\n";
+  cout << "The average rainfall for " << monthOne << ", " << monthTwo << ", and " << monthThree << endl;
+  cout << " is " << fixed << setprecision(2) << showpoint << averageRain << " inches.\n";
 
   return 0;
 }
