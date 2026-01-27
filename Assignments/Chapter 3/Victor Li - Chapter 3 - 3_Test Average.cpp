@@ -19,7 +19,7 @@ int main()
 // This calculates the average test score by getting the sum of the five test scores before dividing it by 5
   averageScore = (scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive) / 5;
 
-  cout << "The average test score is: " << fixed << setprecision(1) << averageScore << endl;
+  cout << "The average test score is: " << fixed << setprecision(1) << showpoint << averageScore << endl;
   
   return 0;
 }
