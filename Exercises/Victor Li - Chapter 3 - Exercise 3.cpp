@@ -15,7 +15,7 @@ using namespace std;
 int main()
 {
   const double tax = 0.12;
-  unsigned int seedValue = 150;
+  unsigned int seedValue;
   double hours, hourlyRate, grossPay, taxAmount, netPay;
   int avgPayHour, documentNumber;
   string name;
@@ -39,6 +39,7 @@ int main()
   avgPayHour = grossPay / static_cast<double>(hours);
 
 // This generates the document number randomly from 1000 to 2000, after getting a unique seed "using srand(seedValue);"
+  seedValue = time(0);
   srand(seedValue);
   documentNumber = ((rand() % 1001) + 1000);
 
