@@ -36,7 +36,7 @@ int main()
   netPay = grossPay - taxAmount;
 
 // This divides the gross pay by the hours worked to get the average pay per hour
-// The hours worked is changed to a double variable type using static_cast
+// The hours worked is changed to a double variable type using static_cast<double>
   avgPayHour = grossPay / static_cast<double>(hours);
 
 // This generates a unique seed using "seedValue = time(0);" and "srand(seedValue);"
