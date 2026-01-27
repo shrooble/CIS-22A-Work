@@ -43,7 +43,7 @@ int main()
 
 // This divides the gross pay by the hours worked to get the average pay per hour
 // The hours worked is changed to a double variable type using static_cast
-  avgPayHour = grossPay / static_cast<double>(hours);
+  avgPayHour = grossPay / hours;
 
 // This generates the document number randomly from 1000 to 2000, after getting a unique seed "using srand(seedValue);"
   seedValue = time(0);
