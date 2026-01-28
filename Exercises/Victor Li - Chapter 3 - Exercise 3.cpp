@@ -15,7 +15,8 @@ using namespace std;
 
 int main()
 {
-  const double tax = 0.12, documentMin = 1000, documentMax = 2000;
+  const double tax = 0.12;
+  const int documentMin = 1000, documentMax = 2000;
   unsigned int seedValue;
   double hourlyRate, grossPay, taxAmount, netPay, avgPayHour;
   int documentNumber, hours;
