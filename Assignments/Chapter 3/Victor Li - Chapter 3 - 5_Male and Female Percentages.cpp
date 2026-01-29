@@ -19,7 +19,7 @@ int main() {
 // This adds the number of male and female students to get the total number of students in a class
   total = male + female;
 
-// This calculates the percentages for male and female students by dividing the male/female students by the number of total students respectfully
+// This calculates the percentages for male and female students by dividing the male/female students by the number of total students respectfully and multiplying by 100 to get a percentage
   malePercentage = (male / total) * 100;
   femalePercentage = (female / total) * 100;
 
