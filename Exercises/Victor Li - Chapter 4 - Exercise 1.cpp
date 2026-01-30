@@ -36,6 +36,7 @@ int main()
 // This calculates the gross pay by multiplying the rates with each overtime and regular hours and getting the sum of both 
     grossPay = (hourlyRate * hours) + (overtimeRate * overtimeHours);
   }
+    
   else {
 // If there is no overtime pay, this multiplies the hours worked by the hourly pay rate to get the gross pay
   grossPay = hours * hourlyRate;
