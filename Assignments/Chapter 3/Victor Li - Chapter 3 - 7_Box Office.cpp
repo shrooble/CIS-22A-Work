@@ -1,5 +1,7 @@
 /*
   Victor Li
+  Team Name: Cat++
+  Team Members: Kenny Nguyen
   Chapter 3: 7 - Box Office
   This program calculates the gross profit, net profit, and amount paid to distributor based on movie ticket sales 
 */
@@ -24,12 +26,14 @@ int main() {
 
 // This calculates the gross profit from ticket sales by multiplying the ticket amounts with the ticket prices 
   grossProfit = (adultTickets * adultPrice) + (childTickets * childPrice);
+  
 // This calculates the net profit by multiplying the gross profit with the theater percentage
   netProfit = grossProfit * theaterPercent;
+  
 // This calculates the amount paid to the movie distributer by subtracting the gross profit from the net profit
   distributorPay = grossProfit - netProfit;
 
-  cout << "Movie Name: \"" << movieName << "\"" << endl;
+  cout << "\nMovie Name: \"" << movieName << "\"" << endl;
   cout << "Adult Tickets Sold: " << adultTickets << endl;
   cout << "Child Tickets Sold: " << childTickets << endl;
   cout << "Gross Box Office Profit: $" << fixed << setprecision(2) << showpoint << grossProfit << endl;
