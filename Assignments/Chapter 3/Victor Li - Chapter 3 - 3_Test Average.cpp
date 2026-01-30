@@ -1,5 +1,7 @@
 /*
   Victor Li
+  Team Name: Cat++
+  Team Members: Kenny Nguyen
   Chapter 3: 3 - Test Average
   This program determines the average test score of 5 user inputted test scores
 */
@@ -14,12 +16,12 @@ int main()
   double scoreOne, scoreTwo, scoreThree, scoreFour, scoreFive, averageScore;
 
   cout << "Enter 5 test scores with a space separation between each input:\n";
-  cin >> scoreOne << scoreTwo << scoreThree << scoreFour << scoreFive;
+  cin >> scoreOne >> scoreTwo >> scoreThree >> scoreFour >> scoreFive;
 
-// This calculates the average test score by getting the sum of the five test scores before dividing it by 5
+// This calculates the average test score by getting the sum of the five test scores before dividing the sum by 5
   averageScore = (scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive) / 5;
 
-  cout << "The average test score is: " << fixed << setprecision(1) << showpoint << averageScore << endl;
+  cout << "\nThe average test score is: " << fixed << setprecision(1) << showpoint << averageScore << endl;
   
   return 0;
 }
