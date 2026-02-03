@@ -32,7 +32,7 @@ int main()
   overtimeRate = hourlyRate * OVERTIME_MULTIPLIER;
 
   if (hours > REGULAR_HOURS) {
-// If there is overtime pay, this calculates the remainder of hours / 40 so that overtimeHours has the overtime hours and hours has only the max 40 hours
+// If there is overtime pay, this calculates the hours - REGULAR_HOURS so that overtimeHours has the overtime hours and hours has only the max 40 hours
     overtimeHours = hours - REGULAR_HOURS;
     newHours = hours - overtimeHours;
 // This calculates the gross pay by multiplying the rates with each overtime and regular hours and getting the sum of both 
@@ -45,7 +45,6 @@ int main()
   }
 
 // This divides the gross pay by the hours worked to get the average pay per hour
-// The hours worked is changed to a double variable type using static_cast
   avgPayHour = grossPay / hours;
 
 // This generates the document number randomly from 1000 to 2000, after getting a unique seed "using srand(seedValue);"
