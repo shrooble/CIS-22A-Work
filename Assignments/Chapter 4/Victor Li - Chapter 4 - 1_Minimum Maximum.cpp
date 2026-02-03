@@ -20,8 +20,11 @@ int main() {
   else if (numberOne > numberTwo) {
     cout << "\n" << numberOne << " is larger than " << numberTwo << endl;
   }
-  else {
+  else if (numberOne < numberTwo) {
     cout << "\n" << numberTwo << " is larger than " << numberOne << endl;
+  }
+  else {
+    cout << "Not a number\n";
   }
 
   return 0;
