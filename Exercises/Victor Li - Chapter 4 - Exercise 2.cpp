@@ -28,7 +28,7 @@ int main()
   cout << "Enter the hourly pay rate:\n";
   cin >> hourlyRate;
 
-// This calculates the overtime pay based on the user's regular hourly pay rate
+// This calculates the overtime pay based on the user's regular hourly pay rate and the OVERTIME_MULTIPLIER
   overtimeRate = hourlyRate * OVERTIME_MULTIPLIER;
 
   if (hours > REGULAR_HOURS) {
@@ -47,7 +47,7 @@ int main()
 // This divides the gross pay by the hours worked to get the average pay per hour
   avgPayHour = grossPay / hours;
 
-// This generates the document number randomly from 1000 to 2000, after getting a unique seed "using srand(seedValue);"
+// This generates the document number randomly from DOC_MIN to DOC_MAX, after getting a unique seed "using srand(seedValue);"
   seedValue = time(0);
   srand(seedValue);
   documentNumber = ((rand() % (DOC_MAX - DOC_MIN + 1)) + DOC_MIN);
