@@ -32,11 +32,11 @@ int main()
   cout << "Enter the minimum and maximum document number, separated by a space:\n";
   cin >> docMin >> docMax;
 
-// This calculates the overtime pay based on the user's regular hourly pay rate
+// This calculates the overtime pay based on the user's regular hourly pay rate and the overtime multiplier
   overtimeRate = hourlyRate * overtimeMultiplier;
 
   if (hours > regularHours) {
-// If there is overtime pay, this calculates the remainder of hours / 40 so that overtimeHours has the overtime hours and hours has only the max 40 hours
+// If there is overtime pay, this calculates the hours - regularHours so that overtimeHours has the overtime hours and hours has only the max "regularHours" hours
     overtimeHours = hours - regularHours;
     newHours = hours - overtimeHours;
 // This calculates the gross pay by multiplying the rates with each overtime and regular hours and getting the sum of both 
@@ -49,10 +49,9 @@ int main()
   }
 
 // This divides the gross pay by the hours worked to get the average pay per hour
-// The hours worked is changed to a double variable type using static_cast
   avgPayHour = grossPay / hours;
 
-// This generates the document number randomly from 1000 to 2000, after getting a unique seed "using srand(seedValue);"
+// This generates the document number randomly from docMin to docMax, after getting a unique seed "using srand(seedValue);"
   seedValue = time(0);
   srand(seedValue);
   documentNumber = ((rand() % (docMax - docMin + 1)) + docMin);
