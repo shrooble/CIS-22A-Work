@@ -2,7 +2,7 @@
   Victor Li
   Chapter 4: Exercise 1
   This program provides an formatted report of: 
-  Company Name, Hours Worked, Hourly Pay Rate, Overtime Pay Rate, Document Number, Gross Pay, and Average Hourly Pay
+  Company Name, Hours Worked, Hourly Pay Rate, Potential Overtime Pay Rate, Document Number, Gross Pay, and Average Hourly Pay
 */
 
 #include <iostream>
