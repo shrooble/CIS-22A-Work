@@ -72,8 +72,50 @@ int main()
 
 /*
 Sample Output #1:
-
-
-Sample Output #2:
+  Enter your College or Company name:
+  SJSU
+  Enter the number of hours worked:
+  50
+  Enter the hourly pay rate:
+  10
+  Enter the amount of regular hours before overtime starts:
+  40
+  Enter the overtime multiplier:
+  1.1
+  Enter the minimum and maximum document number, separated by a space:
+  500 1000
   
+  Information Summary
+  -------------------
+  Company Name: SJSU
+  Hours Worked: 50 hours
+  Hourly Pay Rate: $10.00
+  Potential Overtime Pay Rate: $11.00
+  Document Number: #622
+  Gross Pay: $510.00
+  Average Hourly Pay: $10.20
+  
+Sample Output #2:
+  Enter your College or Company name:
+  Google
+  Enter the number of hours worked:
+  10
+  Enter the hourly pay rate:
+  20
+  Enter the amount of regular hours before overtime starts:
+  20
+  Enter the overtime multiplier:
+  5
+  Enter the minimum and maximum document number, separated by a space:
+  100 200
+  
+  Information Summary
+  -------------------
+  Company Name: Google
+  Hours Worked: 10 hours
+  Hourly Pay Rate: $20.00
+  Potential Overtime Pay Rate: $100.00
+  Document Number: #119
+  Gross Pay: $200.00
+  Average Hourly Pay: $20.00
 */  
