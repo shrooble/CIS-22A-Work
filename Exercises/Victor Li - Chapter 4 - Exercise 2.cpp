@@ -14,7 +14,8 @@ using namespace std;
 
 int main()
 {
-  const int REGULAR_HOURS = 40, OVERTIME_MULTIPLIER = 1.5, DOC_MIN = 1000, DOC_MAX = 2000;
+  const int REGULAR_HOURS = 40, DOC_MIN = 1000, DOC_MAX = 2000;
+  const double OVERTIME_MULTIPLIER = 1.5;
   unsigned int seedValue;
   double hours, hourlyRate, grossPay, avgPayHour, overtimeRate, newHours;
   int documentNumber, overtimeHours;
@@ -66,4 +67,39 @@ int main()
 }
 
 /*
+Sample Output #1:
+  Enter your College or Company name:
+  De Anza
+  Enter the number of hours worked:
+  38
+  Enter the hourly pay rate:
+  5
+  
+  Information Summary
+  -------------------
+  Company Name: De Anza
+  Hours Worked: 38 hours
+  Hourly Pay Rate: $5.00
+  Potential Overtime Pay Rate: $7.50
+  Document Number: #1078
+  Gross Pay: $190.00
+  Average Hourly Pay: $5.00
+
+Sample Output #2:
+  Enter your College or Company name:
+  Google
+  Enter the number of hours worked:
+  45
+  Enter the hourly pay rate:
+  10
+  
+  Information Summary
+  -------------------
+  Company Name: Google
+  Hours Worked: 45 hours
+  Hourly Pay Rate: $10.00
+  Potential Overtime Pay Rate: $15.00
+  Document Number: #1246
+  Gross Pay: $475.00
+  Average Hourly Pay: $10.56
 */  
