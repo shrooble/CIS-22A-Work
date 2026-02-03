@@ -1,7 +1,7 @@
 /*
   Victor Li
   Chapter 4: Minimum/Maximum
-
+  This program 
 */
 
 #include <iostream>
@@ -21,7 +21,7 @@ int main() {
     cout << "\n" << numberOne << " is larger than " << numberTwo << endl;
   }
   else {
-        cout << "\n" << numberTwo << " is larger than " << numberOne << endl;
+    cout << "\n" << numberTwo << " is larger than " << numberOne << endl;
   }
 
   return 0;
