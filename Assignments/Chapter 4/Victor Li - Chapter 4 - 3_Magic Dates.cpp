@@ -23,9 +23,12 @@ int main() {
   if (magicDate == year) {
     cout << "\n" << month << "/" << day << "/" << year << " is a magic date\n";
   }
-  if (magicDate != year) {
+  else if (magicDate != year) {
     cout << "\n" << month << "/" << day << "/" << year << " is not a magic date\n";
   }
-    
+  else {
+    cout << "\nInvalid inputs\n";
+  }
+  
   return 0;
 }
