@@ -1,6 +1,6 @@
 /*
   Victor Li
-  Chapter 4: Body Mass Index
+  Chapter 4: 5 - Body Mass Index
 
 */
 
