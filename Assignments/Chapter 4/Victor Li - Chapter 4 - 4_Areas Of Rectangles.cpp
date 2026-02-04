@@ -1,6 +1,6 @@
 /*
   Victor Li
-  Chapter 4: Areas of Rectangles
+  Chapter 4: 4 - Areas of Rectangles
 
 */
 
