@@ -1,6 +1,6 @@
 /*
   Victor Li
-  Chapter 4: Roman Numeral Converter
+  Chapter 4: 2 - Roman Numeral Converter
   This program converts the numbers 1 - 10 into their roman numeral counterparts
 */
 
