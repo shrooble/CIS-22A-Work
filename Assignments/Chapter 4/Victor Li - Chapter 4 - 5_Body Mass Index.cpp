@@ -12,9 +12,9 @@ using namespace std;
 int main() {
   double BMI, weight, height;
 
-  cout << "Enter your weight:\n";
+  cout << "Enter your weight (lbs):\n";
   cin >> weight;
-  cout << "Enter your height:\n";
+  cout << "Enter your height (inches):\n";
   cin >> height;
 
   BMI = (weight * 703) / pow(height, 2);
