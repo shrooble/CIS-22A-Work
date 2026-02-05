@@ -49,6 +49,7 @@ int main() {
     default: 
       cout << "\nNot a number from 1 - 10\n";
       break;
+  }
 
   return 0;
 }
