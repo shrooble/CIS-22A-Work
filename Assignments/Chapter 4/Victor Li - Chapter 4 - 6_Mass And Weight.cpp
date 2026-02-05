@@ -26,6 +26,5 @@ int main() {
     cout << "\nInvalid Inputs\n";
   }
 
-  
   return 0;
 }
