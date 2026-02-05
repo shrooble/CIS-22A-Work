@@ -18,10 +18,10 @@ int main() {
   if ((colorOne == "Red" && colorTwo == "Blue") || (colorOne == "Blue" &&  colorTwo == "Red")) {
     cout << "\n" << colorOne << " and " << colorTwo << " mixed together create purple\n";
   }
-  else if ((colorOne == "Red" && colorTwo == "Yellow") || (colorOne == "Yellow" &&  colorTwo == "Red"))
+  else if ((colorOne == "Red" && colorTwo == "Yellow") || (colorOne == "Yellow" &&  colorTwo == "Red")) {
     cout << "\n" << colorOne << " and " << colorTwo << " mixed together create orange\n";
   }
-  else if ((colorOne == "Blue" && colorTwo == "Yellow") || (colorOne == "Yellow" &&  colorTwo == "Blue"))
+  else if ((colorOne == "Blue" && colorTwo == "Yellow") || (colorOne == "Yellow" &&  colorTwo == "Blue")) {
         cout << "\n" << colorOne << " and " << colorTwo << " mixed together create green\n";
   }
   else {
