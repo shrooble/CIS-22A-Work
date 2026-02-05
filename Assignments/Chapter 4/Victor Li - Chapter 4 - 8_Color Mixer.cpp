@@ -22,10 +22,10 @@ int main() {
     cout << "\n" << colorOne << " and " << colorTwo << " mixed together create orange\n";
   }
   else if ((colorOne == "Blue" && colorTwo == "Yellow") || (colorOne == "Yellow" &&  colorTwo == "Blue")) {
-        cout << "\n" << colorOne << " and " << colorTwo << " mixed together create green\n";
+    cout << "\n" << colorOne << " and " << colorTwo << " mixed together create green\n";
   }
   else {
-    cout << "Invalid Inputs"
+    cout << "Invalid Inputs";
   }
 
   return 0;
