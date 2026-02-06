@@ -14,7 +14,7 @@ int main() {
   cout << "Enter a number for 1 - 10:\n";
   cin >> userNumber;
 
-// This switch statement checks for a number between 1 and 10 and outputs their roman numeral, or outputs "Not a number from 1 - 10"
+// This switch statement checks for a number between 1 and 10 and outputs their roman numeral, otherwise it outputs "Not a number from 1 - 10"
   switch(userNumber) {
     case 1: 
       cout << "\nRoman Numeral: I\n";
