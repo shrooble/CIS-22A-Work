@@ -1,7 +1,7 @@
 /*
   Victor Li
   Chapter 4: 7 - Time Calculator
-  This program displays the relevant seconds, minutes, hours, or days based on a user inputted amount of seconds
+  This program displays the relevant seconds, minutes, hours, or days based on an user inputted amount of seconds
 */
 
 #include <iostream>
