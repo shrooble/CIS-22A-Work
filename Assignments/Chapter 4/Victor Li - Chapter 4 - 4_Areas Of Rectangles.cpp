@@ -1,7 +1,7 @@
 /*
   Victor Li
   Chapter 4: 4 - Areas of Rectangles
-  This program compares the area of 2 different rectangles
+  This program compares the area of 2 different rectangles based on user inputted length and width measurements
 */
 
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
     cout << "\nThe area of rectangle one, " << areaOne << ", is equal to rectangle two, " << areaTwo << endl;
   }
   else {
-    cout << "\nInvalid inputs\n";
+    cout << "\nInvalid Inputs\n";
   }
   
   return 0;
