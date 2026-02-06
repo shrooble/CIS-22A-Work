@@ -11,7 +11,7 @@ using namespace std;
 int main() {
   int day, month, year, magicDate;
 
-  cout << "Enter a month (In numeric form):\n";
+  cout << "Enter a month (1 - 12):\n";
   cin >> month;
   cout << "Enter a day:\n";
   cin >> day;
@@ -30,7 +30,7 @@ int main() {
     cout << "\n" << month << "/" << day << "/" << year << " is not a magic date\n";
   }
   else {
-    cout << "\nInvalid inputs\n";
+    cout << "\nInvalid Inputs\n";
   }
   
   return 0;
