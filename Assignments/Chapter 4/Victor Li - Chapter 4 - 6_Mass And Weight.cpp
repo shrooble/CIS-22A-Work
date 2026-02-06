@@ -18,7 +18,7 @@ int main() {
   if (weight < 10) {
     cout << "\nObject Weight: " << weight << " N, Too Light\n";
   }
-// This checks whether the weight is less than 1000 N (Inclusive)
+// This checks whether the weight is between 10 N and 1000 N (Inclusive)
   else if (weight <= 1000) {
     cout << "\nObject Weight: " << weight << " N\n";
   }
