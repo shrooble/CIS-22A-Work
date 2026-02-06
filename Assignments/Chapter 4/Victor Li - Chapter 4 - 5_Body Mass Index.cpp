@@ -17,7 +17,7 @@ int main() {
   cout << "Enter your height (inches):\n";
   cin >> height;
 
-// This calculates the BMI with the quotient between the product of the weight times 703, and the height squared
+// This calculates the BMI with the quotient between the product of the weight times 703, divided by the height squared
   BMI = (weight * 703) / pow(height, 2);
 
 // This checks whether the BMI is a valid number (More than 0) (Inclusive)
