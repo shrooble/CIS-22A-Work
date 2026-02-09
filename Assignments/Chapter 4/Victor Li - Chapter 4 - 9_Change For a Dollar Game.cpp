@@ -25,7 +25,7 @@ int main() {
 
 // This checks whether the coins add up to $1 exactly
   if (total == 1) {
-    cout << "\nYou correctly got to $1 using: " << pennies << " pennies, " << nickels / 5 << " nickels, " << dimes / 10 << " dimes, " << quarters / 25 << " and quarters\n";
+    cout << "\nYou correctly got to $1 using: " << pennies << " pennies, " << nickels / 5 << " nickels, " << dimes / 10 << " dimes, and " << quarters / 25 << " quarters\n";
   }
 // This checks whether the coins were less than $1
   else if (total < 1) {
