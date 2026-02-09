@@ -27,7 +27,7 @@ int main() {
     cout << "\n" << numberOne << " is less than " << numberTwo << endl;
   }
   else {
-    cout << "\nNot a number\n";
+    cout << "\nError\n";
   }
 
   return 0;
