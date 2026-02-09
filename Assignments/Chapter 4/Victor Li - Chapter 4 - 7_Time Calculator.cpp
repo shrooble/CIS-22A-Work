@@ -41,7 +41,7 @@ int main() {
   }
 // This only occurs if seconds <= 0
   else {
-    cout << "\nInvalid Input\n";
+    cout << "\nInvalid Amount Of Time\n";
   }
 
   return 0;
