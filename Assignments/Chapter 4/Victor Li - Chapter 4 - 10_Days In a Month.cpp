@@ -22,7 +22,7 @@ int main() {
     if ( !(year % 400)) {
       leapYear = 1;
     }
-  // This only occurs if the year isn't divisible by 400 (If it had a remainder)
+  // This only occurs if the year isn't divisible by 400 (False if it had a remainder)
     else {
       leapYear = 0;
     }
@@ -31,7 +31,7 @@ int main() {
   else if ( !(year % 4)) {
     leapYear = 1;
   }
-// This only occurs if the year isn't divisible by 4
+// This only occurs if the year isn't divisible by 4 (False if it had a remainder)
   else {
     leapYear = 0;
   }
