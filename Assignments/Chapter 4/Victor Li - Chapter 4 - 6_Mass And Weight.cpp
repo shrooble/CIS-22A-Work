@@ -11,7 +11,7 @@ using namespace std;
 int main() {
   double mass, weight;
 
-  cout << "Enter the object's mass:\n";
+  cout << "Enter the object's mass (kg):\n";
   cin >> mass;
   
 // This finds the weight by the product of the mass and 9.8
