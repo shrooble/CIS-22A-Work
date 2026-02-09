@@ -10,6 +10,9 @@ using namespace std;
 
 int main() {
   double mass, weight;
+
+  cout << "Enter the object's mass:\n";
+  cin >> weight;
   
 // This finds the weight by the product of the mass and 9.8
   weight = mass * 9.8;
