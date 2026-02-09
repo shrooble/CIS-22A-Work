@@ -31,6 +31,7 @@ int main() {
   else if ( !(year % 4)) {
     leapYear = 1;
   }
+// This only occurs if the year isn't divisible by 4
   else {
     leapYear = 0;
   }
