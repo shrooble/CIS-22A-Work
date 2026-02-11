@@ -1,6 +1,6 @@
 /*
   Victor Li
-  Chapter 4: Exercise 3
+  Chapter 5: Exercise 1
   This program provides an formatted report of: 
   Company Name, Hours Worked, Hourly Pay Rate, Potential Overtime Pay Rate, Document Number, Gross Pay, and Average Hourly Pay
 */
@@ -35,6 +35,19 @@ int main()
 // This calculates the overtime pay based on the user's regular hourly pay rate and the overtime multiplier
   overtimeRate = hourlyRate * overtimeMultiplier;
 
+// This loops until the user inputs a valid amount of hours (more than 0)
+  while (hours <= 0) {
+    cout << "Invalid Input - ";
+    cout << "Enter the number of hours worked:\n";
+    cin >> hours;  
+  }
+// This loops until the user inputs a valid hourly rate (more than 0)
+  while (hourlyRate <= 0) {
+    cout << "Invalid Input - ";
+    cout << "Enter the amount of regular hours before overtime starts:\n";
+    cin >> hours;  
+  }
+    
   if (hours > regularHours) {
 // If there is overtime pay, this calculates the hours - regularHours so that overtimeHours has the overtime hours and hours has only the max "regularHours" hours
     overtimeHours = hours - regularHours;
