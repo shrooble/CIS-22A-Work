@@ -41,26 +41,26 @@ int main()
     cout << "Enter the number of hours worked:\n";
     cin >> hours;  
   }
+  
 // This loops until the user inputs a valid hourly rate (more than 0)
   while (hourlyRate <= 0) {
     cout << "Invalid Input - ";
     cout << "Enter the amount of regular hours before overtime starts:\n";
     cin >> hours;  
   }
-    
-  if (hours > regularHours) {
+  
 // If there is overtime pay, this calculates the hours - regularHours so that overtimeHours has the overtime hours and hours has only the max "regularHours" hours
+  if (hours > regularHours) {
     overtimeHours = hours - regularHours;
     newHours = hours - overtimeHours;
-// This calculates the gross pay by multiplying the rates with each overtime and regular hours and getting the sum of both 
+// This also alculates the gross pay by multiplying the rates with each overtime and regular hours and getting the sum of both 
     grossPay = (hourlyRate * newHours) + (overtimeRate * overtimeHours);
   }
-    
-  else {
 // If there is no overtime pay, this multiplies the hours worked by the hourly pay rate to get the gross pay
+  else {
     grossPay = hours * hourlyRate;
   }
-
+  
 // This divides the gross pay by the hours worked to get the average pay per hour
   avgPayHour = grossPay / hours;
 
