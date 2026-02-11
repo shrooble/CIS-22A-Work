@@ -36,7 +36,7 @@ int main()
   overtimeRate = hourlyRate * overtimeMultiplier;
 
 // This loops until the user inputs a valid amount of hours (more than 0)
-  while (hours <= 0) {
+  while (hours < 0) {
     cout << "Invalid Input - ";
     cout << "Enter the number of hours worked:\n";
     cin >> hours;  
