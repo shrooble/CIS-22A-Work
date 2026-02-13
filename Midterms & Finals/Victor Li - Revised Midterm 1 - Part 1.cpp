@@ -143,23 +143,29 @@ int main() {
   ofstream outFile("output.txt");
   
 // This outputs a formatted bill to the console and file based on the burgers and quantities chosen
-  cout << outFile << "\nDe Anza Food Court Bill\n" << "----------------------\n";
+  cout <<   << "\nDe Anza Food Court Bill\n" << "----------------------\n";
   if (quantityOne > 0) {
-    cout << outFile << "1 - " << burgerOne << "\nQuantity: " << quantityOne << "\nCost Per Item: " << ONE_PRICE << "\nItem Total: " << quantityOne * ONE_PRICE << endl;
+    cout << "1 - " << burgerOne << "\nQuantity: " << quantityOne << "\nCost Per Item: " << ONE_PRICE << "\nItem Total: " << quantityOne * ONE_PRICE << endl;
+    outFile << "1 - " << burgerOne << "\nQuantity: " << quantityOne << "\nCost Per Item: " << ONE_PRICE << "\nItem Total: " << quantityOne * ONE_PRICE << endl;
   }
   if (quantityTwo > 0) {
-    cout << outFile << "\n2 - " << burgerTwo << "\nQuantity: " << quantityTwo << "\nCost Per Item: " << TWO_PRICE << "\nItem Total: " << quantityTwo * TWO_PRICE << endl;
+    cout << "\n2 - " << burgerTwo << "\nQuantity: " << quantityTwo << "\nCost Per Item: " << TWO_PRICE << "\nItem Total: " << quantityTwo * TWO_PRICE << endl;
+    outFile << "\n2 - " << burgerTwo << "\nQuantity: " << quantityTwo << "\nCost Per Item: " << TWO_PRICE << "\nItem Total: " << quantityTwo * TWO_PRICE << endl;
   }
   if (quantityThree > 0) {
-    cout << outFile << "\n3 - " << burgerThree << "\nQuantity: " << quantityThree << "\nCost Per Item: " << THREE_PRICE << "\nItem Total: " << quantityThree * THREE_PRICE << endl;
+    cout << "\n3 - " << burgerThree << "\nQuantity: " << quantityThree << "\nCost Per Item: " << THREE_PRICE << "\nItem Total: " << quantityThree * THREE_PRICE << endl;
+    outFile << "\n3 - " << burgerThree << "\nQuantity: " << quantityThree << "\nCost Per Item: " << THREE_PRICE << "\nItem Total: " << quantityThree * THREE_PRICE << endl;
   }
   if (quantityFour > 0) {
-    cout << outFile << "\n4 - " << burgerFour << "\nQuantity: " << quantityFour << "\nCost Per Item: " << FOUR_PRICE << "\nItem Total: " << quantityFour * FOUR_PRICE << endl;
+    cout << "\n4 - " << burgerFour << "\nQuantity: " << quantityFour << "\nCost Per Item: " << FOUR_PRICE << "\nItem Total: " << quantityFour * FOUR_PRICE << endl;
+    outFile << "\n4 - " << burgerFour << "\nQuantity: " << quantityFour << "\nCost Per Item: " << FOUR_PRICE << "\nItem Total: " << quantityFour * FOUR_PRICE << endl;
   }
   if (quantityFive > 0) {
-    cout << outFile << "\n5 - " << burgerFive << "\nQuantity: " << quantityFive << "\nCost Per Item: " << FIVE_PRICE << "\nItem Total: " << quantityFive * FIVE_PRICE << endl;
+    cout << "\n5 - " << burgerFive << "\nQuantity: " << quantityFive << "\nCost Per Item: " << FIVE_PRICE << "\nItem Total: " << quantityFive * FIVE_PRICE << endl;
+    outFile << "\n5 - " << burgerFive << "\nQuantity: " << quantityFive << "\nCost Per Item: " << FIVE_PRICE << "\nItem Total: " << quantityFive * FIVE_PRICE << endl;
   }
-  cout << outFile << "\nBill Before Tax: " << subtotal << "\nTax Amount: " << taxAmount << "\nFinal Bill: " << total << endl;
+  cout << "\nBill Before Tax: " << subtotal << "\nTax Amount: " << taxAmount << "\nFinal Bill: " << total << endl;
+  outFile << "\nBill Before Tax: " << subtotal << "\nTax Amount: " << taxAmount << "\nFinal Bill: " << total << endl;
 
 // This closes the file
   outFile.close();
