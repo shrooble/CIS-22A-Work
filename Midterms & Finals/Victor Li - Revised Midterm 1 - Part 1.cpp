@@ -143,7 +143,8 @@ int main() {
   ofstream outFile("output.txt");
   
 // This outputs a formatted bill to the console and file based on the burgers and quantities chosen
-  cout <<   << "\nDe Anza Food Court Bill\n" << "----------------------\n";
+  cout << "\nDe Anza Food Court Bill\n" << "----------------------\n";
+  outFile << "\nDe Anza Food Court Bill\n" << "----------------------\n";
   if (quantityOne > 0) {
     cout << "1 - " << burgerOne << "\nQuantity: " << quantityOne << "\nCost Per Item: " << ONE_PRICE << "\nItem Total: " << quantityOne * ONE_PRICE << endl;
     outFile << "1 - " << burgerOne << "\nQuantity: " << quantityOne << "\nCost Per Item: " << ONE_PRICE << "\nItem Total: " << quantityOne * ONE_PRICE << endl;
