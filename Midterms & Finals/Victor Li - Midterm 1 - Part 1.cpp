@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
   char orderEnd;
-  bool option = true, staff = false, invalidStaffChoice = true;
+  bool option = true, staff = false, invalidStaffChoice = true, endOrderChoice = false;
   int burgerChoice, quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
   const double TAX_MULTIPLIER = 0.09, ONE_PRICE = 5.25, TWO_PRICE = 5.75, THREE_PRICE = 5.95, FOUR_PRICE = 5.95, FIVE_PRICE = 5.95;
   double subtotal, staffTax;
@@ -36,7 +36,6 @@ int main() {
       cout << "Enter 0 if you want to end the order\n";
       cin >> burgerChoice;
     }
-
 // This switch statement asks the user the quantity for the burger they chose
     switch (burgerChoice) {
       case 0:
@@ -86,25 +85,24 @@ int main() {
         cout << "Error\n";
         break;
     }
-
-    cout << "Is that all? (Y or N):\n";
-    cin >> orderEnd;
-
-// This asks the user if they want to end the order by pressing Y, or continuing by pressing N
-    if (orderEnd == 'Y' || orderEnd == 'y') {
-      option = false;
-    }
-    else {
-      option = true;
-      burgerChoice = 0;
-    }
+    while (endOrderChoice != false) {
+      cout << "Is that all? (Y or N):\n";
+      cin >> orderEnd;
+  // This switch statement asks the user if they want to end the order by pressing Y, or continuing by pressing N
+      switch (orderEnd) {
+        case 'Y':
+        case 'y':
+          endOrderChoice = true;
+          option = false;
+          break;
+        case 'n':
+          
   }
 
 // This loop ensures the user enters a valid user type
   while (invalidStaffChoice != true) {
     cout << "Are you a student or staff?\n";
     cin >> taxOption;
-
   // This statement changes staff to true and invalidStaffChoice to false, ending the while loop
     if (taxOption == "staff" || taxOption == "Staff") {
       staff = true;
