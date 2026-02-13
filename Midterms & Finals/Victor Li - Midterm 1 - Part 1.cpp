@@ -2,7 +2,7 @@
   Victor Li
   Team Name: Cat++
   Team Members: Kenny Nguyen
-
+  
 */
 
 #include <iostream>
@@ -28,13 +28,16 @@ int main() {
   cout << burgerFive << " - $" << FIVE_PRICE << endl;
   cout << "End Order - 0\n";
 
+// This loops until the user chooses to end the order
   while (option != false) {
+  // This loops if the user enters a non valid choice (something not 0 - 5)
     while (burgerChoice > 5 || burgerChoice < 0) {
       cout << "\nChoose a burger from 1 - 5\n";
       cout << "Enter 0 if you want to end the order\n";
       cin >> burgerChoice;
     }
-    
+
+// This switch statement asks the user the quantity for the burger they chose
     switch (burgerChoice) {
       case 0:
         option = false;
@@ -86,7 +89,8 @@ int main() {
 
     cout << "Is that all? (Y or N):\n";
     cin >> orderEnd;
-        
+
+// This asks the user if they want to end the order by pressing Y, or continuing by pressing N
     if (orderEnd == 'Y' || orderEnd == 'y') {
       option = false;
     }
@@ -96,14 +100,17 @@ int main() {
     }
   }
 
+// This loop ensures the user enters a valid user type
   while (invalidStaffChoice != true) {
     cout << "Are you a student or staff?\n";
     cin >> taxOption;
-    
+
+  // This statement changes staff to true and invalidStaffChoice to false, ending the while loop
     if (taxOption == "staff" || taxOption == "Staff") {
       staff = true;
       invalidStaffChoice = false;
     }
+  // This statement changes staff to false and invalidStaffChoice to false, ending the while loop
     else if (taxOption == "student" || taxOption == "Student") {
       staff = false;
       invalidStaffChoice = false;
