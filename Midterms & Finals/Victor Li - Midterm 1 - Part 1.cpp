@@ -16,7 +16,7 @@ int main() {
   bool option = true, staff = false, invalidStaffChoice = true, endOrderChoice = false;
   int burgerChoice, quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
   const double TAX_MULTIPLIER = 0.09, ONE_PRICE = 5.25, TWO_PRICE = 5.75, THREE_PRICE = 5.95, FOUR_PRICE = 5.95, FIVE_PRICE = 5.95;
-  double subtotal, staffTax;
+  double subtotal, staffTaxAmount, total;
   string burgerOne = "De Anza Burger", burgerTwo = "Bacon Cheese Burger", burgerThree = "Mushroom Swiss Burger", burgerFour = "Western Burger", 
           burgerFive = "Don Cali Burger", taxOption;
   
@@ -96,7 +96,8 @@ int main() {
           option = false;
           break;
         case 'n':
-          
+      }
+    }
   }
 
 // This loop ensures the user enters a valid user type
@@ -118,10 +119,19 @@ int main() {
       invalidStaffChoice = true;
     }
   }
-    
+  
+  subtotal = (burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice)
+
   if (staff) {
-    subtotal = staffTax * ((burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice) + (burgerOne * burgerOnePrice)
-  cout << 
+    staffTaxAmount = staffTax * subtotal;
+    total = staffTaxAmount + subtotal;
+  }
+  else {
+    continue;
+  }
+  cout << "\nTotal Bill\n";
+  if (quantityOne > 0) {
+    
       
   return 0;
 }
