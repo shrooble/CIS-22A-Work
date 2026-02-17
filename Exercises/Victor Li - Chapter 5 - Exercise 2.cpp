@@ -106,7 +106,56 @@ int main()
 
 /*
 Sample Output #1:
+  Enter your College or Company name:
+  De Anza
+  Enter the number of hours worked:
+  0
+  Enter the hourly pay rate:
+  0
+  Invalid Input - Enter the hourly pay rate:
+  5
+  Enter the amount of regular hours before overtime starts:
+  20
+  Enter the overtime multiplier:
+  5
+  Enter the minimum and maximum document number, separated by a space:
+  100 550
   
-Sample Output #2:
+  Information Summary
+  -------------------
+  Company Name: De Anza
+  Hours Worked: 0 hours
+  Hourly Pay Rate: $5.00
+  Potential Overtime Pay Rate: $25.00
+  Document Number: #161
+  Gross Pay: $0.00
+  Average Hourly Pay: $0.00
 
+Sample Output #2:
+  Enter your College or Company name:
+  Google
+  Enter the number of hours worked:
+  -1
+  Invalid Input - Enter the number of hours worked:
+  10
+  Enter the hourly pay rate:
+  0
+  Invalid Input - Enter the hourly pay rate:
+  10
+  Enter the amount of regular hours before overtime starts:
+  5
+  Enter the overtime multiplier:
+  5
+  Enter the minimum and maximum document number, separated by a space:
+  100 200
+  
+  Information Summary
+  -------------------
+  Company Name: Google
+  Hours Worked: 10 hours
+  Hourly Pay Rate: $10.00
+  Potential Overtime Pay Rate: $50.00
+  Document Number: #127
+  Gross Pay: $300.00
+  Average Hourly Pay: $30.00
 */  
