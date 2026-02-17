@@ -143,5 +143,4 @@ Sample Output #2:
   Document Number: #127
   Gross Pay: $300.00
   Average Hourly Pay: $30.00
-
 */  
