@@ -3,6 +3,8 @@
   Team Name: Cat++
   Team Members: Kenny Nguyen
   This program provides a menu for 5 burgers from the De Anza College Food Court and outputs a formatted bill to both the console and an output file
+
+  FIX: change the continue while loop to a do-while loop 
 */
 
 #include <iostream> 
