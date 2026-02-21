@@ -62,7 +62,14 @@ int main() {
   cout << "Total Withdraws: " << withdrawCount << endl;
   cout << "Total Interest: " << totalInterest << endl;
 
+  ofstream outFile("Savings Account Report.txt");
   
+  outFile << "\nEnding Balance: " << balance << endl;
+  outFile << "Total Deposits: " << depositCount << endl;
+  outFile << "Total Withdraws: " << withdrawCount << endl;
+  outFile << "Total Interest: " << totalInterest << endl;
+
+  outFile.close();
   
   return 0;
 }
