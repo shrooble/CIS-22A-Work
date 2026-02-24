@@ -119,9 +119,9 @@ int main(){
   outFile << "Tax: $" << taxAmount << endl;
   outFile << "Total: $" << total << endl;
 
-    outFile.close();
+  outFile.close();
 
-    return 0;
+  return 0;
 }
 
 /*
