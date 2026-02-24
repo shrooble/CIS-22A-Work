@@ -10,7 +10,8 @@ using namespace std;
 
 int main() {
   double annualInterestRate, monthlyInterestRate, balance, deposit, withdraws, monthlyInterest, totalInterest;
-  int months, depositCount, withdrawCount;
+  int months, depositCount = 0, withdrawCount = 0;
+  bool positiveDeposit = false, positiveWithdraw = false;
 
   cout << "Enter the annual interest rate:\n";
   cin >> annualInterestRate;
@@ -27,24 +28,43 @@ int main() {
   // This checks whether the balance is above 0 at any point
     while (balance >= 0) {
     // This loops ensures the user enters a deposit amount above 0
-      while (deposit < 0) {
-        cout << "Enter the amount deposited into the account for month: " << i << endl;
+      while (!positiveDeposit) {
+        cout << "Enter a positive amount deposited into the account for month: " << i << endl;
         cout << "(Enter a 0 if there were no deposits)\n";
-        cin >> deposits;
-      // This counts the amount of deposits
-        depositCount += 1;
+        cin >> deposit;
+        if (deposit < 0) {
+          cout << " - Enter a positive amount\n";
+        }
+        else {
+        // This adds the deposit to the balance, counts the amount of deposits, and exits the loop
+          balance += deposit;
+          depositCount += 1;
+          positiveDeposit = true;
+        }
       }
     // This loops ensures the user enters a withdrawal amount above 0
-      while (withdraws < 0) {
+      while (!positiveWithdraw) {
         cout << "Enter the amount withdrawn from the account for month: " << i << endl;
         cout << "(Enter a 0 if there were no withdraws)\n";
         cin >> withdraws;
-      // This counts the amount of withdrawals
+        if (withdraws < 0) {
+          cout << " - Enter a positive withdraw amount\n";
+        }
+        else {
+      // This subtracts the withdrawal from the balance, counts the amount of withdrawals, and exits the loop
+        balance -= withdraws;
         withdrawCount += 1;
+        positiveWithdraw = true;
+        }
       }
 
     // This calculates the monthly interest by the product of the monthly interest rate with the balance, also adding the monthly interest to the total interest 
+      if (balance > 0) {
       monthlyInterest = balance * monthlyInterestRate;
+      }
+      else {
+        monthlyInterest = 0;
+      }
       totalInterest += monthlyInterest;
     // This adds the monthly interest to the balance
       balance += monthlyInterest;
