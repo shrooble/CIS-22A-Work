@@ -13,9 +13,9 @@ void message(int);
 int multiplication(int, int);
 
 /*
-  1 - Prototype -> void first(int);
-  2 - Define    -> void first() { int x }
-  3 - Call      -> first(y);
+1 - Prototype -> void first(int);
+2 - Define    -> void first() { int x }
+3 - Call      -> first(y);
 */
 
 int squareFunction(int x) {
@@ -40,7 +40,7 @@ int main() {
   cin >> firstNumber >> secondNumber;
   
   y = multiplication(firstNumber, secondNumber);
-  cout << "\n" << y;
+  cout << "\nThis is the product: " << y;
   
   return 0;
 }
@@ -50,6 +50,5 @@ void message(int number) {
 }
 
 int multiplication (int numberOne, int numberTwo) {
-  int x = numberOne * numberTwo;
-  return x;
+  return numberOne * numberTwo;
 }
