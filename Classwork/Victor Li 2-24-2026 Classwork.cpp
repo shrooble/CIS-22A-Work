@@ -14,8 +14,8 @@ void secondMessage(int);
 int multiplication(int, int);
 
 /*
-  1 - Prototype -> void first(int);
-  2 - Define    -> void first() { int x }
+  1 - Prototype -> void first(int);        
+  2 - Define    -> void first(int x) { . . . }  
   3 - Call      -> first(y);
 */
 
@@ -40,8 +40,9 @@ int main() {
   
   cout << "\n\nEnter 2 numbers to multiply together, separated by a space:\n";
   cin >> firstNumber >> secondNumber;
-  
+// This assigns variable y with the output of multiplication function, with firstNumber and secondNumber as arguments
   y = multiplication(firstNumber, secondNumber);
+// This calls secondMessage function with y as an argument
   secondMessage(y);  
   
   return 0;
@@ -58,3 +59,9 @@ int multiplication (int numberOne, int numberTwo) {
 void secondMessage(int y) {
   cout << "\nThe product is: " << y << endl;
 }
+
+/*
+  Prototypes are used if the function appears after main, declared before main, and declare the variable type in the parentheses
+  Function definitions with parameters must have arguments in their calls in main
+  Calls with arguments (in main) must have the variable declared in main
+*/
