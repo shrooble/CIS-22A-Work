@@ -9,13 +9,14 @@
 using namespace std;
 
 // This prototypes the message function (So the function can appear after main)
-void message(int);
+void firstMessage(int);
+void secondMessage(int);
 int multiplication(int, int);
 
 /*
-1 - Prototype -> void first(int);
-2 - Define    -> void first() { int x }
-3 - Call      -> first(y);
+  1 - Prototype -> void first(int);
+  2 - Define    -> void first() { int x }
+  3 - Call      -> first(y);
 */
 
 int squareFunction(int x) {
@@ -30,25 +31,30 @@ int main() {
   cin >> number;
 
 // This calls squareFunction and passes number as an argument, then calls message with the output of squareFunction as the argument
-   message(squareFunction(number));
+   firstMessage(squareFunction(number));
 /*
   Can also be done like:
   x = squareFunction(number);
   message(x);
 */
+  
   cout << "\n\nEnter 2 numbers to multiply together, separated by a space:\n";
   cin >> firstNumber >> secondNumber;
   
   y = multiplication(firstNumber, secondNumber);
-  cout << "\nThis is the product: " << y;
+  secondMessage(y);  
   
   return 0;
 }
 
-void message(int number) {
+void firstMessage(int number) {
   cout << "This is the squared number: " << number;
 }
 
 int multiplication (int numberOne, int numberTwo) {
   return numberOne * numberTwo;
+}
+
+void secondMessage(int y) {
+  cout << "\nThe product is: " << y << endl;
 }
