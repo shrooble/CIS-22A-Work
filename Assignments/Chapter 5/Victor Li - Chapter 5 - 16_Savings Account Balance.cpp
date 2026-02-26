@@ -9,17 +9,21 @@
 using namespace std;
 
 int main() {
-  double annualInterestRate, monthlyInterestRate, balance, deposit, withdraws, monthlyInterest, totalInterest;
+  double annualInterestRate = 0.0, monthlyInterestRate, balance, deposit, withdraws, monthlyInterest, totalInterest;
   int months, depositCount = 0, withdrawCount = 0;
   bool positiveDeposit = false, positiveWithdraw = false;
 
-  cout << "Enter the annual interest rate:\n";
-  cin >> annualInterestRate;
   cout << "Enter your starting balance:\n";
   cin >> balance;
   cout << "Enter the number of months that have passed since the account opened:\n";
   cin >> months;
 
+// This loops ensures the user puts an annual interest rate greater than 0
+  while (annualInterestRate <= 0) {
+    cout << "Enter the annual interest rate:\n";
+    cin >> annualInterestRate;
+  }
+  
 // This calculates the monthly interest rate by dividing the annual interest rate by 12
   monthlyInterestRate = annualInterestRate / 12;
 
