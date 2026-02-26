@@ -18,7 +18,7 @@ int main() {
   cout << "Enter the number of months that have passed since the account opened:\n";
   cin >> months;
 
-// This loops ensures the user puts an annual interest rate greater than 0
+// This loops ensures the user inputs an annual interest rate greater than 0
   while (annualInterestRate <= 0) {
     cout << "Enter the annual interest rate:\n";
     cin >> annualInterestRate;
