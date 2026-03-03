@@ -1,34 +1,41 @@
 /*
   Victor Li
   Chapter 5: 18 - Population Bar Chart
-  This program 
+  This program outputs the year and the population growth with * representing 1000 people
 */
 
 #include <iostream>
 #include <fstream>
-#include <string>
 
 using namespace std;
 
 int main() {
-  string text;
+  int text = 0, year = 1900;
   
   ifstream file("People.txt");
-int year = 1900;
-  for (int i = 0; i < 7; ++i, year + 20) {
-    cout << "Year: " << year << endl;
-    getline(file, text);
-    cout << "people: " << text << endl;
-    cout << "Pointer: " << file.tellg() << endl;
+  
+  if (!file) {
+    cout << "People.txt file not located\n";
   }
-  
-  
-  getline(file, text);
-  
-  cout << text;
-
-
+  else {
+    cout << "Each * represents 1000 people\n";
+    
+    for (int i = 0; i < 7; ++i) {
+      cout << "\nYear: " << year << endl;
+      file >> text;
+      text /= 1000;
+      cout << "people: ";
+      
+      for (int i = 0; i < text; ++i) {
+          cout << "*";
+      }
+      
+      cout << endl;
+      year += 20;
+    }
+    
   file.close();
+  }
   
   return 0;
 }
