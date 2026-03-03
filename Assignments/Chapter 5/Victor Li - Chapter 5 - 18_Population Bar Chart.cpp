@@ -39,3 +39,14 @@ int main() {
   
   return 0;
 }
+
+/*
+The People.txt file contains:
+  2000
+  4000
+  5000
+  9000
+  14000
+  18000
+  18000
+*/
