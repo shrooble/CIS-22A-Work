@@ -46,6 +46,7 @@ int main() {
           positiveDeposit = true;
         }
       }
+      
     // This loops ensures the user enters a withdrawal amount above 0
       while (!positiveWithdraw) {
         cout << "Enter the amount withdrawn from the account for month: " << i << endl;
@@ -69,10 +70,11 @@ int main() {
       else {
         monthlyInterest = 0;
       }
+    // This adds the monthly interest to the balance and total interest
       totalInterest += monthlyInterest;
-    // This adds the monthly interest to the balance
       balance += monthlyInterest;
     }
+    
   // This occurs only if the balance goes negative
     if (balance < 0) {
       cout << "The account has been closed on month " << i << " for a negative balance of " << balance << endl;
