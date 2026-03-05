@@ -57,15 +57,15 @@ int main() {
         }
         else {
       // This subtracts the withdrawal from the balance, counts the amount of withdrawals, and exits the loop
-        balance -= withdraws;
-        withdrawCount += 1;
-        positiveWithdraw = true;
+          balance -= withdraws;
+          withdrawCount += 1;
+          positiveWithdraw = true;
         }
       }
 
     // This calculates the monthly interest by the product of the monthly interest rate with the balance, also adding the monthly interest to the total interest 
       if (balance > 0) {
-      monthlyInterest = balance * monthlyInterestRate;
+        monthlyInterest = balance * monthlyInterestRate;
       }
       else {
         monthlyInterest = 0;
