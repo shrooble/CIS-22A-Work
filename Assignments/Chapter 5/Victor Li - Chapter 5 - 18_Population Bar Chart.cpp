@@ -11,9 +11,11 @@ using namespace std;
 
 int main() {
   int text = 0, year = 1900;
-  
+
+// This opens the "People.txt" file under the name of "file"
   ifstream file("People.txt");
-  
+
+// This only occurs if the People.txt file isn't downloaded
   if (!file) {
     cout << "People.txt file not located\n";
   }
@@ -41,7 +43,7 @@ int main() {
 }
 
 /*
-The People.txt file contains:
+For reference the People.txt file contains:
   2000
   4000
   5000
