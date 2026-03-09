@@ -21,7 +21,8 @@ int main() {
   }
   else {
     cout << "Each * represents 1000 people\n";
-    
+
+  // This loops 7 times and puts a "*" for every 1000 people
     for (int i = 0; i < 7; ++i) {
       cout << "\nYear: " << year << endl;
       file >> text;
