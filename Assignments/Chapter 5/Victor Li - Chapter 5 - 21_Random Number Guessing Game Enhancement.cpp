@@ -1,7 +1,7 @@
 
 /*
   Victor Li
-  Chapter 5: 20 - Random Number Guessing Game
+  Chapter 5: 21 - Random Number Guessing Game Enhancement
   This program generates a random number and asks the user to guess what the number is
 */
 
