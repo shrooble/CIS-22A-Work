@@ -10,14 +10,11 @@
 
 using namespace std;
 
-void coinToss(int 0);
+void coinToss(int = 0);
 
 int main() {
-  int randomNumber, tossAmount;
+  int tossAmount;
 
-// This makes the random number based on the user's time
-  srand(time(0));
-  
   cout << "Enter the amount of times the coin should be tossed:\n";
   cin >> tossAmount;
 
@@ -28,10 +25,14 @@ int main() {
 }
 
 void coinToss(int value) {
+  int randomNumber;
 // This loops for the amount of coin tosses that the user inputted
   for (int i = 0; i < value; ++i) {
+  // This makes the random number based on the user's time
+    srand(time(0));  
   // This randomizes the number 
-    randomNumber = rand() % 1 + 1;
+    randomNumber = rand() % 2 + 1;
+    cout << randomNumber << " ";
     if (randomNumber == 1) {
       cout << "\nHeads";
     }
