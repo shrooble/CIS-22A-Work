@@ -13,10 +13,10 @@ int main() {
   int value = 0, valueSum = 0, valueAverage = 0, valueCounter = 0;
   bool endFile = true;
   
-  // This opens the Random.txt file in read mode
+// This opens the Random.txt file in read mode
   ifstream file("Random.txt");
   
-  // This only occurs if the Random.txt file isn't found
+// This only occurs if the Random.txt file isn't found
   if (!file) {
     cout << "Random.txt file not located\n";
   }
