@@ -11,7 +11,7 @@
 using namespace std;
 
 int main() {
-  int randomNumber, userGuess, counter;
+  int randomNumber, userGuess, counter = 0;
 
 // This randomizes and assigns the random number based on the user's time
   srand(time(0));
