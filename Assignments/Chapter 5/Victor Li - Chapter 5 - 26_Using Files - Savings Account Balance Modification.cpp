@@ -10,49 +10,87 @@
 using namespace std;
 
 int main() {
-  double annualInterestRate, monthlyInterestRate, balance, deposit, withdraws, monthlyInterest, totalInterest;
-  int months, depositCount, withdrawCount;
+  double annualInterestRate = 0.0, monthlyInterestRate = 0.0, balance, deposit = 0.0, withdraws = 0.0, monthlyInterest, totalInterest = 0.0;
+  int months, depositCount = 0, withdrawCount = 0, monthCount = 0;
+  bool positiveDeposit = false, positiveWithdraw = false;
 
-  cout << "Enter the annual interest rate:\n";
-  cin >> annualInterestRate;
   cout << "Enter your starting balance:\n";
   cin >> balance;
   cout << "Enter the number of months that have passed since the account opened:\n";
   cin >> months;
 
+// This loops ensures the user inputs an annual interest rate greater than 0
+  while (annualInterestRate <= 0) {
+    cout << "Enter the annual interest rate:\n";
+    cin >> annualInterestRate;
+  }
+  
 // This calculates the monthly interest rate by dividing the annual interest rate by 12
   monthlyInterestRate = annualInterestRate / 12;
 
 // This loops for the amount of months the user inputted
   for (int i = 1; i <= months; ++i) {
+    positiveDeposit = false;
+    positiveWithdraw = false;
+    
   // This checks whether the balance is above 0 at any point
     while (balance >= 0) {
     // This loops ensures the user enters a deposit amount above 0
-      while (deposit < 0) {
-        cout << "Enter the amount deposited into the account for month: " << i << endl;
+      while (!positiveDeposit) {
+        cout << "\nEnter a positive amount deposited into the account for month: " << i << endl;
         cout << "(Enter a 0 if there were no deposits)\n";
-        cin >> deposits;
-      // This counts the amount of deposits
-        depositCount += 1;
+        cin >> deposit;
+        if (deposit < 0) {
+          cout << " - Enter a positive amount\n";
+        }
+        else if (deposit == 0) {
+          positiveDeposit = true;
+        }
+        else {
+        // This adds the deposit to the balance, counts the amount of deposits, and exits the deposit loop
+          balance += deposit;
+          depositCount += 1;
+          positiveDeposit = true;
+        }
       }
+      
     // This loops ensures the user enters a withdrawal amount above 0
-      while (withdraws < 0) {
-        cout << "Enter the amount withdrawn from the account for month: " << i << endl;
+      while (!positiveWithdraw) {
+        cout << "\nEnter the amount withdrawn from the account for month: " << i << endl;
         cout << "(Enter a 0 if there were no withdraws)\n";
         cin >> withdraws;
-      // This counts the amount of withdrawals
-        withdrawCount += 1;
+        if (withdraws < 0) {
+          cout << " - Enter a positive withdraw amount\n";
+        }
+        else if (withdraws == 0) {
+          positiveWithdraw = true;
+        }
+        else {
+      // This subtracts the withdrawal from the balance, counts the amount of withdrawals, and exits the withdraw loop
+          balance -= withdraws;
+          withdrawCount += 1;
+          positiveWithdraw = true;
+        }
       }
-
+      
+      monthCount = i;
+      
     // This calculates the monthly interest by the product of the monthly interest rate with the balance, also adding the monthly interest to the total interest 
-      monthlyInterest = balance * monthlyInterestRate;
+      if (balance > 0) {
+        monthlyInterest = balance * monthlyInterestRate;
+      }
+      else {
+        monthlyInterest = 0;
+      }
+    // This adds the monthly interest to the balance and total interest
       totalInterest += monthlyInterest;
-    // This adds the monthly interest to the balance
       balance += monthlyInterest;
+      break;
     }
+    
   // This occurs only if the balance goes negative
     if (balance < 0) {
-      cout << "\nThe account has been closed on month " << i << " for a negative balance of " << balance << endl;
+      cout << "The account has been closed on month " << monthCount << " for a negative balance of " << balance << endl;
       break;
     }
   }
