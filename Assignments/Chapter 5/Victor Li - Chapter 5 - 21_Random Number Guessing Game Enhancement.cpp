@@ -1,4 +1,3 @@
-
 /*
   Victor Li
   Chapter 5: 21 - Random Number Guessing Game Enhancement
