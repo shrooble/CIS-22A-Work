@@ -1,7 +1,7 @@
 /* 
   Victor Li
   Chapter 6: 11 - Lowest Score Drop
-  FIX: do "int (&array)[ARAY_SIZE]" to properly reference arrays across functions
+  This program drops the lowest score out of 5 test scores and outputs the average of the top 4 highest scores
 */
 
 #include <iostream>
@@ -10,50 +10,54 @@ using namespace std;
 
 const int ARRAY_SIZE = 5;
 
-void getScore(int&);
-void calcAverage(int&);
-int findLowest(int);
+void getScore(int (&array)[ARRAY_SIZE]);
+void calcAverage(int (&array)[ARRAY_SIZE]);
+int findLowest(int array[ARRAY_SIZE]);
 
 int main() {
-  int testScores[ARRAY_SIZE];
-  
+  int testScores[ARRAY_SIZE] = {-1, -1, -1, -1, -1};
+
+// Functions calls passing testScores array as an arguemnt
   getScore(testScores);
   calcAverage(testScores);
-  
+
   return 0;
 }
 
-void getScore(int& array[ARRAY_SIZE]) {
+// This function asks the user for the 5 test scores
+void getScore(int (&array)[ARRAY_SIZE]) {
   for (int i = 0; i < ARRAY_SIZE; ++i) {
-    while (array[i] < 0 || array[i] > 100) {  // For some reason the while loop messes with i = 3
+  // This while loop makes sure the user inputs a value higher than 0, but lower than 100
+    while (array[i] < 0 || array[i] > 100) {  
       cout << "\nWhat is score #" << (i + 1) << "?\n";
       cin >> array[i];
     }
   }
 }
 
-void calcAverage(int& array[ARRAY_SIZE]) {
-  int count, arraySum;
+// This function gets the sum of each test score and outputs the average of the top 4 highest scores
+void calcAverage(int (&array)[ARRAY_SIZE]) {
+  int arraySum = 0, arrayAverage = 0;
 
+// This gets the sum of the array (the test scores)
   for (int i = 0; i < ARRAY_SIZE; ++i) {
     arraySum += array[i];
-    ++count;
   }
 
-  arraySum = (arraySum - findLowest(array)) / 4;
+// This finds the average top 4 test scores by subtracting the lowest score from the sum and dividing the whole thing by 4
+  arrayAverage = (arraySum - findLowest(array)) / 4;
 
-  cout << "The average of the four highest test scores are: " << arraySum << endl; 
+  cout << "\nThe average of the four highest test scores are: " << arrayAverage << endl; 
 }
 
+// This function returns the lowest test score to be subtracted in calcAverage()
 int findLowest(int array[ARRAY_SIZE]) {
-  int count, lowest;
-
-  lowest = array[0];
+  int lowest = array[0];
+  
   for (int i = 0; i < ARRAY_SIZE; ++i) {
-    if  (lowest > array[i]) {
+    if (lowest > array[i]) {
       lowest = array[i];
     }
-    ++count;
   }
   
   return lowest;
