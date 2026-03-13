@@ -37,7 +37,8 @@ void getScore(int (&array)[ARRAY_SIZE]) {
 
 // This function gets the sum of each test score and outputs the average of the top 4 highest scores
 void calcAverage(int (&array)[ARRAY_SIZE]) {
-  int arraySum = 0, arrayAverage = 0;
+  int arraySum = 0;
+  double arrayAverage = 0.0;
 
 // This gets the sum of the array (the test scores)
   for (int i = 0; i < ARRAY_SIZE; ++i) {
