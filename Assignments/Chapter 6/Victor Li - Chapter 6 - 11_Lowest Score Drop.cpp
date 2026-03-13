@@ -1,7 +1,7 @@
 /* 
   Victor Li
   Chapter 6: 11 - Lowest Score Drop
-
+  FIX: do "int (&array)[ARAY_SIZE]" to properly reference arrays across functions
 */
 
 #include <iostream>
@@ -25,7 +25,7 @@ int main() {
 
 void getScore(int& array[ARRAY_SIZE]) {
   for (int i = 0; i < ARRAY_SIZE; ++i) {
-    while (array[i] < 0 || array[i] > 100) {  
+    while (array[i] < 0 || array[i] > 100) {  // For some reason the while loop messes with i = 3
       cout << "\nWhat is score #" << (i + 1) << "?\n";
       cin >> array[i];
     }
