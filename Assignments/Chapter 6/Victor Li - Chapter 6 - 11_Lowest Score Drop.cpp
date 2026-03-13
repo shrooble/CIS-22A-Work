@@ -46,7 +46,7 @@ void calcAverage(int (&array)[ARRAY_SIZE]) {
   }
 
 // This finds the average top 4 test scores by subtracting the lowest score from the sum and dividing the whole thing by 4
-  arrayAverage = (arraySum - findLowest(array)) / 4;
+  arrayAverage = (arraySum - findLowest(array)) / 4.0;
 
   cout << "\nThe average of the four highest test scores are: " << arrayAverage << endl; 
 }
