@@ -12,19 +12,20 @@
 
 using namespace std;
 
-double PRICE_ARRAY[ARRAY_SIZE] = {5.25, 5.75, 5.95, 5.95, 5.95};
-string BURGER_ARRAY[ARRAY_SIZE] = {"De Anza Burger", "Bacon Cheese", "Mushroom Swiss", "Western Burger", "Don Cali Burger"};
-int ARRAY_SIZE = 5, orderArray[ARRAY_SIZE] = {0, 0, 0, 0, 0};
+double PRICE_ARRAY[5] = {5.25, 5.75, 5.95, 5.95, 5.95};
+string BURGER_ARRAY[5] = {"De Anza Burger", "Bacon Cheese", "Mushroom Swiss", "Western Burger", "Don Cali Burger"};
+int orderArray[5] = {0, 0, 0, 0, 0};
 
 void displayMenu();
-void getInputs(int (&orderArray)[ARRAY_SIZE], bool &staffUser = false);
+void getInputs(int (&orderArray)[5], bool& staffUser);
 void calculate();
 void printBill();
 void saveBillToFile();
 
 int main() {
+  bool staffUser = false;
   displayMenu();
-  getInputs(int (&orderArray)[ARRAY_SIZE], bool &staffUser);
+  getInputs(orderArray, staffUser);
   calculate();
   printBill();
   saveBillToFile();
@@ -35,35 +36,33 @@ int main() {
 void displayMenu() {
   cout << fixed << showpoint << setprecision(2);
   cout << "---- De Anza Food Court ----\n";
-  for (int i = 0; i < ARRAY_SIZE; ++i) {
-    cout << (i+1) << ". " << BURGER_ARRAY[i] << " - $" << PRICE_ARRAY[i];
+  for (int i = 0; i < 5; ++i) {
+    cout << (i+1) << ". " << BURGER_ARRAY[i] << " - $" << PRICE_ARRAY[i] << endl;
   }
 }
 
-void getInputs(int (&orderArray)[ARRAY_SIZE], bool staffUser) {
+void getInputs(int (&orderArray)[5], bool &staffUser) {
   int burgerChoice, burgerQuantity;
   bool endOrder = false;
 
 // This loops the ordering menu until the user chooses to end the order (Entering 0)
   while (!endOrder) {
-    cout << "Choose a burger from the menu (1 - 5):\n";
+    cout << "\nChoose a burger from the menu (1 - 5):\n";
     cout << "Or enter 0 to exit\n";
     cin >> burgerChoice;
   // This ends the entire order and exits the ordering loop
     if (burgerChoice == 0) {
       endOrder = true;
     }
+  // This sends the user back to the ordering while loop if they choose something x < 1 or x > 5
     else if (burgerChoice >= 1 && burgerChoice <= 5) {
-      cout << "Enter the quantity:\n";
-      cin >> burgerQuantity;
-    // This ensures the burgerChoice matches with the orderArray
+    // This ensures the burgerChoice matches with the orderArray by subtracting 1
       burgerChoice -= 1;
       switch (burgerChoice) {
         case 0: 
           cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
           cout << "Enter 0 to cancel\n";
           cin >> burgerQuantity;
-        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
           if (burgerQuantity == 0) {
             burgerChoice = -1;
           }    
@@ -71,7 +70,7 @@ void getInputs(int (&orderArray)[ARRAY_SIZE], bool staffUser) {
         break;
         
         case 1:
-          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "\nHow many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
           cout << "Enter 0 to cancel\n";
           cin >> burgerQuantity;
         // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
@@ -113,17 +112,6 @@ void getInputs(int (&orderArray)[ARRAY_SIZE], bool staffUser) {
           }    
           BURGER_ARRAY[burgerChoice] += burgerQuantity;
           break;
-        
-        case 5:
-          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
-          cout << "Enter 0 to cancel\n";
-          cin >> burgerQuantity;
-        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
-          if (burgerQuantity == 0) {
-            burgerChoice = -1;
-          }    
-          BURGER_ARRAY[burgerChoice] += burgerQuantity;
-        break;
         
         default:
           cout << "Invalid Option. Try Again.\n";
