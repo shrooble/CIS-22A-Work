@@ -8,16 +8,14 @@
 
 using namespace std;
 
-int userInput(int& userValue);
+void arraySelectionSort(int (&arraySort)[arraySize],int);
+void arrayBubbleSort(int (&arraySort)[arraySize],int);
 void showValues(int array[], int); 
 int linearArraySearch(int arraySearch[], int, int );
 int binaryArraySearch(int arraySearch[], int, int );
-void arraySelectionSort();
-void arrayBubbleSort();
-
 
 int main() {
-  int userValue, searchValue, arraySize = 0, arrayIndex;
+  int userValue, searchValue, arraySize, arrayIndex, sortValue;
 
   cout << "Enter the size of the array: ";
   cin >> arraySize;
@@ -28,17 +26,32 @@ int main() {
     cin >> userArray[i];
   }
   
-  showValues(userArray, arraySize);
-  searchValue = userInput(userValue);
+  while (sortValue == 1 || sortValue == 2) {
+    cout << "Type 1 or 2 to choose between a 1 - Bubble or a 2 - Selection sort: ";
+    cin >> sortValue;
+
+    if (sortValue == 1) {
+      arrayBubbleSort(userArray, arraySize);
+    }
+    else if (sortValue == 2) {
+      arraySelectionSort(userArray, arraySize);
+    }
+  }
   
-  if (searchValue == 1) {
-    arrayIndex = linearArraySearch(userArray, userValue, arraySize);
-  }
-  else if (searchValue == 2) {
-    arrayIndex = binaryArraySearch(userArray, userValue, arraySize);  
-  }
-  else {
-    cout << "\nError\n";
+  showValues(userArray, arraySize);
+  
+  cout << "\n\nWhat value do you want to search for in the array: ";
+  cin >> userValue;
+  while (searchValue == 1 || searchValue == 2) {
+    cout << "Type 1 or 2 to choose between a 1 - Linear or a 2 - Binary search: ";
+    cin >> searchValue;
+
+    if (searchValue == 1) {
+      arrayIndex = linearArraySearch(userArray, userValue, arraySize);
+    }
+    else if (searchValue == 2) {
+      arrayIndex = binaryArraySearch(userArray, userValue, arraySize);  
+    }
   }
     
   if (arrayIndex != -1) {
@@ -51,24 +64,8 @@ int main() {
   return 0;
 }
 
-int userInput(int &userValue) {
-  char searchOption;
-  cout << "\nWhat value do you want to search for in the array: ";
-  cin >> userValue;
-  while (true) {
-    cout << "Type L or B to choose between a linear or binary search: ";
-    cin >> searchOption;
-    switch (searchOption) {
-      case 'L':
-      case 'l':
-        return 1;
-      break;
-      case 'B':
-      case 'b':
-        return 2;
-      break;
-    }
-  }
+void arrayBubbleSort(int (&arraySort)[arraySize], int arraySize) {
+  
 }
 
 void showValues(int array[], int arraySize) {
@@ -93,11 +90,12 @@ int linearArraySearch(int arraySearch[], int userValue, int arraySize) {
 }
 
 int binaryArraySearch(int arraySearch[], int userValue, int arraySize) {
-  int firstIndex = 0, middleIndex, lastIndex = (arraySize - 1),  position = -1;
+  int firstIndex = 0, middleIndex, lastIndex,  position = -1;
   bool foundValue = false;
   
   while (firstIndex <= lastIndex && !foundValue) {
     
+    lastIndex = (arraySize - 1);
     middleIndex = (firstIndex + lastIndex) / 2;
     
     if (arraySearch[middleIndex] == userValue) {
@@ -111,5 +109,6 @@ int binaryArraySearch(int arraySearch[], int userValue, int arraySize) {
       firstIndex = middleIndex + 1;
     }
   }
+  
   return position;
 }
