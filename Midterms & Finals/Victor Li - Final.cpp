@@ -24,7 +24,7 @@ void saveBillToFile();
 
 int main() {
   displayMenu();
-  getInputs((int (&orderArray)[ARRAY_SIZE], bool &staffUser);
+  getInputs(int (&orderArray)[ARRAY_SIZE], bool &staffUser);
   calculate();
   printBill();
   saveBillToFile();
@@ -47,7 +47,7 @@ void getInputs(int (&orderArray)[ARRAY_SIZE], bool staffUser) {
 // This loops the ordering menu until the user chooses to end the order (Entering 0)
   while (!endOrder) {
     cout << "Choose a burger from the menu (1 - 5):\n";
-    cout << "Or press 0 to exit\n";
+    cout << "Or enter 0 to exit\n";
     cin >> burgerChoice;
   // This ends the entire order and exits the ordering loop
     if (burgerChoice == 0) {
@@ -56,8 +56,83 @@ void getInputs(int (&orderArray)[ARRAY_SIZE], bool staffUser) {
     else if (burgerChoice >= 1 && burgerChoice <= 5) {
       cout << "Enter the quantity:\n";
       cin >> burgerQuantity;
-      // insert the switch statement from last time here?
-      // after, check for student/staff 
+    // This ensures the burgerChoice matches with the orderArray
+      burgerChoice -= 1;
+      switch (burgerChoice) {
+        case 0: 
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+        break;
+        
+        case 1:
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+          break;
+        
+        case 2:
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+          break;
+        
+        case 3:
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+          break;
+        
+        case 4:
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+          break;
+        
+        case 5:
+          cout << "How many of " << BURGER_ARRAY[burgerChoice] << " do you want to order:\n";
+          cout << "Enter 0 to cancel\n";
+          cin >> burgerQuantity;
+        // This sends the user back to the while loop for (burgerChoice > 5 || burgerChoice < 0)
+          if (burgerQuantity == 0) {
+            burgerChoice = -1;
+          }    
+          BURGER_ARRAY[burgerChoice] += burgerQuantity;
+        break;
+        
+        default:
+          cout << "Invalid Option. Try Again.\n";
+          burgerChoice = -1;
+        break;
+      }
+    }
+    else {
+      cout << "Invalid Option. Try Again.\n";
     }
   }
 }
@@ -77,6 +152,7 @@ void saveBillToFile() {
   fileNumber = rand() % 1001 + 1000;
 // This creates and opens a file named "output.txt"
   ofstream outFile("output.txt");
+  
 
   
 }
