@@ -357,6 +357,7 @@ Sample Output #2:
     Tax Amount: $0.00
     Total: $5.25
 
+(I included this to show what happens when the user prematurely presses 0 at the beginning)
 Sample Output #3:
     ---- De Anza Food Court ----
     1. De Anza Burger - $5.25
