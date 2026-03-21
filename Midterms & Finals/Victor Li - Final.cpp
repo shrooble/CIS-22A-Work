@@ -60,9 +60,19 @@ bool getInputs() {
         
     // This ends the ordering loop
         if (burgerChoice == 0) {
-            ordering = false;
-            correctOrder = false;
-            continue;
+        // This for loop checks whether the user ordered anything, writing out an ending message 
+            for (int arrayElement : orderArray) {
+                if (arrayElement > 0) {
+                    nullOrder = false;
+                    correctOrder = false;
+                }
+            }  
+
+        // This checks if the user ended the program without ordering anything
+            if (nullOrder) {
+                cout << "\nNo burger has been ordered - Ending program\n";
+                ordering = false;
+            }
         }
         
     // This ensures the user inputs a valid burger choice between 1 - 5, before asking for the burger amount
@@ -106,56 +116,49 @@ bool getInputs() {
             cout << "\nInvalid burger choice, try again\n";
             continue;
         }
-    }
     
+
+        
     // This loop ensures the user enters Y or N, printing out the amount of each respective burger ordered and burger name
-    while (!correctOrder) {
-        cout << "\nIs your order correct - Y or N:\n";
-        for (int i = 0; i < 5; ++i) {
-            if (orderArray[i] != 0) {
-                cout << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << PRICE_ARRAY[i] << endl;        
+        while (!correctOrder) {
+            cout << "\nIs your order correct - Y or N:\n";
+            for (int i = 0; i < 5; ++i) {
+                if (orderArray[i] != 0) {
+                    cout << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << PRICE_ARRAY[i] << endl;        
+                }
+            }
+            cin >> orderCheck;
+            switch (orderCheck) {
+                case 'Y':
+                case 'y':
+                    ordering = false;
+                    correctOrder = true;
+                    break;
+                case 'N':
+                case 'n':
+                // This for loop resets the ordering array to 0, before returning to the ordering loop
+                    for (int i = 0; i < 5; ++i) {
+                        if (orderArray[i] != 0) {
+                            orderArray[i] = 0;        
+                        }
+                    }
+                    correctOrder = true;
+                    nullOrder = true;
+                    cout << "\nOrder has been reset\n";
+                    break;
+                default:
+                    cout << "\nInvalid choice, enter Y or N\n";
+                    break;
             }
         }
-        cin >> orderCheck;
-        switch (orderCheck) {
-            case 'Y':
-            case 'y':
-                ordering = false;
-                correctOrder = true;
-                break;
-            case 'N':
-            case 'n':
-            // This for loop resets the ordering array to 0, before returning to the ordering loop
-                for (int i = 0; i < 5; ++i) {
-                    if (orderArray[i] != 0) {
-                        orderArray[i] = 0;        
-                    }
-                }
-                correctOrder = true;
-                ordering = true;
-                cout << "\nOrder has been reset\n";
-                break;
-            default:
-                cout << "\nInvalid choice, enter Y or N\n";
-                break;
-        }
     }
     
-    
-    
-    
-// This for loop checks whether the user ordered anything, writing out an ending message 
-    for (int arrayElement : orderArray) {
-        if (arrayElement > 0) {
-            nullOrder = false;
-            break;
-        }
-    }  
 
-// This checks if the user ended the program without ordering anything
-    if (nullOrder) {
-        cout << "\nNo burger has been ordered - Ending program\n";
-    }
+    
+    
+    
+    
+
     
 // This loop checks if the user is a student or staff, ensuring they press 1 or 2
     while (!correctUserChoice && !nullOrder) {
