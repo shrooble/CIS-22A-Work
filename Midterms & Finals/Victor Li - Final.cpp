@@ -41,7 +41,7 @@ int main()
 
 // This function displays the burger names alongside their respective price
 void displayMenu() {
-    cout << fixed << showpoint << setprecision(2) << "---- De Anza Food Court ----\n";
+    cout << "---- De Anza Food Court ----\n";
     for (int i = 0; i < 5; ++i) {
         cout << (i + 1) << ". " << BURGER_ARRAY[i] << " - $" << PRICE_ARRAY[i] << endl;
     }
@@ -53,14 +53,14 @@ bool getInputs() {
     char orderCheck;
     bool ordering = true, correctOrder = true, correctUserChoice = false, staffUser = false, nullOrder = true;
 
-// This loops until the user ends by order by pressing 0
+// This loops until the user ends by order by pressing 0, alongside other factors
     while (ordering) {
         cout << "\nChoose a burger (1 - 5):\n" << "Or enter 0 to end the order\n";
         cin >> burgerChoice;
         
     // This ends the ordering loop
         if (burgerChoice == 0) {
-        // This for loop checks whether the user ordered anything, writing out an ending message 
+        // This for loop checks whether the user ordered anything
             for (int arrayElement : orderArray) {
                 if (arrayElement > 0) {
                     nullOrder = false;
@@ -80,7 +80,7 @@ bool getInputs() {
             cout << "\nEnter quantity:\n" << "You may enter 0 to cancel your burger choice\n";
             cin >> amount;
             
-        // This cancels the burger choice by making "burgerChoice" = -1, removing the user's burger choice input
+        // This cancels the burger choice by making "burgerChoice" = -1, removing the user's previous burger choice input
             if (amount == 0) {
                 burgerChoice = -1;
                 
@@ -124,7 +124,7 @@ bool getInputs() {
             cout << "\nIs your order correct - Y or N:\n";
             for (int i = 0; i < 5; ++i) {
                 if (orderArray[i] != 0) {
-                    cout << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << PRICE_ARRAY[i] << endl;        
+                    cout << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << (PRICE_ARRAY[i] * orderArray[i]) << endl;        
                 }
             }
             cin >> orderCheck;
@@ -152,13 +152,6 @@ bool getInputs() {
             }
         }
     }
-    
-
-    
-    
-    
-    
-
     
 // This loop checks if the user is a student or staff, ensuring they press 1 or 2
     while (!correctUserChoice && !nullOrder) {
@@ -209,7 +202,13 @@ double calculate(bool staffUser, double &subtotal, double &taxAmount) {
 // This function outputs the final bill to the console
 void printBill(double total, double subtotal, double taxAmount) {
     cout << "\n---- De Anza Food Court Bill ----\n";
+    cout << fixed << showpoint << setprecision(2);
     
+    for (int i = 0; i < 5; ++i) {
+        if (orderArray[i] > 0) {
+            cout << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << (PRICE_ARRAY[i] * orderArray[i]) << endl;
+        }
+    }
     cout << "\nSubtotal: $" << subtotal;
     cout << "\nTax Amount: $" << taxAmount;
     cout << "\nTotal: $" << total;
@@ -218,4 +217,18 @@ void printBill(double total, double subtotal, double taxAmount) {
 // This function saves the final bill to a file with a random document number
 void saveBillToFile(double total, double subtotal, double taxAmount) {
     
+// This creates and opens a file named "output.txt"
+    ofstream outFile("output.txt");
+    
+    outFile << "\n---- De Anza Food Court Bill ----\n";
+    outFile << fixed << showpoint << setprecision(2);
+    
+    for (int i = 0; i < 5; ++i) {
+        if (orderArray[i] > 0) {
+            outFile << BURGER_ARRAY[i] << " - " << orderArray[i] << "x = $" << (PRICE_ARRAY[i] * orderArray[i]) << endl;
+        }
+    }
+    outFile << "\nSubtotal: $" << subtotal;
+    outFile << "\nTax Amount: $" << taxAmount;
+    outFile << "\nTotal: $" << total;
 }
