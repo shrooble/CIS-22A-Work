@@ -41,7 +41,7 @@ int main()
 
 // This function displays the burger names alongside their respective price
 void displayMenu() {
-    cout << "---- De Anza Food Court ----\n";
+    cout << fixed << showpoint << setprecision(2) << "---- De Anza Food Court ----\n";
     for (int i = 0; i < 5; ++i) {
         cout << (i + 1) << ". " << BURGER_ARRAY[i] << " - $" << PRICE_ARRAY[i] << endl;
     }
@@ -202,7 +202,6 @@ double calculate(bool staffUser, double &subtotal, double &taxAmount) {
 // This function outputs the final bill to the console
 void printBill(double total, double subtotal, double taxAmount) {
     cout << "\n---- De Anza Food Court Bill ----\n";
-    cout << fixed << showpoint << setprecision(2);
     
     for (int i = 0; i < 5; ++i) {
         if (orderArray[i] > 0) {
