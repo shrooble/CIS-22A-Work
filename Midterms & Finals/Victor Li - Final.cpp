@@ -214,11 +214,18 @@ void printBill(double total, double subtotal, double taxAmount) {
 
 // This function saves the final bill to a file with a random document number
 void saveBillToFile(double total, double subtotal, double taxAmount) {
+    int documentNumber;
+    string fileName;
+
+// This creates a random number between 1000 and 2000 based on the user's time
+    srand(time(0));
+    documentNumber = rand() % 1001 + 1000; 
     
-// This creates and opens a file named "output.txt"
-    ofstream outFile("output.txt");
+// This creates and opens a file with the document number as the file's name
+    fileName = to_string(documentNumber) + ".txt";
+    ofstream outFile(fileName);
     
-    outFile << "\n---- De Anza Food Court Bill ----\n";
+    outFile << "---- De Anza Food Court Bill ----\n";
     outFile << fixed << showpoint << setprecision(2);
     
     for (int i = 0; i < 5; ++i) {
