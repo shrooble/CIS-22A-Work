@@ -237,3 +237,143 @@ void saveBillToFile(double total, double subtotal, double taxAmount) {
     outFile << "\nTax Amount: $" << taxAmount;
     outFile << "\nTotal: $" << total;
 }
+
+/*
+Sample Output #1:
+    ---- De Anza Food Court ----
+    1. De Anza Burger - $5.25
+    2. Bacon Cheese - $5.75
+    3. Mushroom Swiss - $5.95
+    4. Western Burger - $5.95
+    5. Don Cali Burger - $5.95
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    1
+    
+    Enter quantity:
+    You may enter 0 to cancel your burger choice
+    0
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    2
+    
+    Enter quantity:
+    You may enter 0 to cancel your burger choice
+    1
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    0
+    
+    Is your order correct - Y or N:
+    Bacon Cheese - 1x = $5.75
+    n
+    
+    Order has been reset
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    2
+    
+    Enter quantity:
+    You may enter 0 to cancel your burger choice
+    2
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    0
+    
+    Is your order correct - Y or N:
+    Bacon Cheese - 2x = $11.50
+    y
+    
+    Press 1 if you are a student, otherwise press 2 if you are a staff member: 2
+    
+    ---- De Anza Food Court Bill ----
+    Bacon Cheese - 2x = $11.50
+    
+    Subtotal: $11.50
+    Tax Amount: $1.03
+    Total: $12.54
+    
+Sample Output #2:
+    ---- De Anza Food Court ----
+    1. De Anza Burger - $5.25
+    2. Bacon Cheese - $5.75
+    3. Mushroom Swiss - $5.95
+    4. Western Burger - $5.95
+    5. Don Cali Burger - $5.95
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    6
+    
+    Invalid burger choice, try again
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    1
+    
+    Enter quantity:
+    You may enter 0 to cancel your burger choice
+    -1
+    
+    Invalid amount, try again
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    1
+    
+    Enter quantity:
+    You may enter 0 to cancel your burger choice
+    1
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    0
+    
+    Is your order correct - Y or N:
+    De Anza Burger - 1x = $5.25
+    a
+    
+    Invalid choice, enter Y or N
+    
+    Is your order correct - Y or N:
+    De Anza Burger - 1x = $5.25
+    y
+    
+    Press 1 if you are a student, otherwise press 2 if you are a staff member: 3
+    
+    Invalid choice - enter 1 for student or 2 for staff
+    
+    Press 1 if you are a student, otherwise press 2 if you are a staff member: 1
+    
+    ---- De Anza Food Court Bill ----
+    De Anza Burger - 1x = $5.25
+    
+    Subtotal: $5.25
+    Tax Amount: $0.00
+    Total: $5.25
+
+Sample Output #3:
+    ---- De Anza Food Court ----
+    1. De Anza Burger - $5.25
+    2. Bacon Cheese - $5.75
+    3. Mushroom Swiss - $5.95
+    4. Western Burger - $5.95
+    5. Don Cali Burger - $5.95
+    
+    Choose a burger (1 - 5):
+    Or enter 0 to end the order
+    0
+    
+    No burger has been ordered - Ending program
+    
+    ---- De Anza Food Court Bill ----
+    
+    Subtotal: $0.00
+    Tax Amount: $0.00
+    Total: $0.00
+*/
