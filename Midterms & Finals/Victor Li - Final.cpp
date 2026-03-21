@@ -2,6 +2,8 @@
   Victor Li
   Team Name: Cat++
   Team Members: Kenny Nguyen
+
+  Final Part 1
   This program provides a menu for 5 burgers from the De Anza College Food Court and outputs a formatted bill to both the console and an output file
 */
 
@@ -83,7 +85,6 @@ bool getInputs() {
         // This cancels the burger choice by making "burgerChoice" = -1, removing the user's previous burger choice input
             if (amount == 0) {
                 burgerChoice = -1;
-                
             }
         // This switch statement adds the amount to the respective burger
             else if (amount > 0) {
@@ -117,8 +118,6 @@ bool getInputs() {
             continue;
         }
     
-
-        
     // This loop ensures the user enters Y or N, printing out the amount of each respective burger ordered and burger name
         while (!correctOrder) {
             cout << "\nIs your order correct - Y or N:\n";
